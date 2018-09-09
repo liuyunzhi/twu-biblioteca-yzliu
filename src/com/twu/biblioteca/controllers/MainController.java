@@ -27,6 +27,7 @@ public class MainController {
                 BookController.ListBooks();
                 break;
             default:
+                System.out.println("Select a valid option!");
                 break;
         }
     }

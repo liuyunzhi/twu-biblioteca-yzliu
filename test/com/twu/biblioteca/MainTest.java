@@ -81,6 +81,15 @@ public class MainTest {
         MainController.selectMenuItem("1");
         //then
         assertEquals(expected, bytes.toString());
+    }
 
+    @Test
+    public void should_be_notified_given_invalid_input() {
+        //given
+        String expected = "Select a valid option!\n";
+        //when
+        MainController.selectMenuItem("a");
+        //then
+        assertEquals(expected, bytes.toString());
     }
 }
