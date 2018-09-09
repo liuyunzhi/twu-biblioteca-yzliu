@@ -1,6 +1,6 @@
 package com.twu.biblioteca.controllers;
 
-public class MainMenu {
+public class MainController {
 
     public static void printWelcomeMessage() {
         System.out.println("**************************");
@@ -19,5 +19,15 @@ public class MainMenu {
         System.out.println("* 2. ...                 *");
         System.out.println("*                        *");
         System.out.println("**************************");
+    }
+
+    public static void selectMenuItem(String index) {
+        switch (index) {
+            case "1":
+                BookController.ListBooks();
+                break;
+            default:
+                break;
+        }
     }
 }

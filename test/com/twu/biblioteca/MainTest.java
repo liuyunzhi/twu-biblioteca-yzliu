@@ -1,30 +1,36 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.controllers.MainMenu;
+import com.twu.biblioteca.controllers.BookController;
+import com.twu.biblioteca.controllers.MainController;
+import com.twu.biblioteca.entity.Book;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class CustomerTest {
+public class MainTest {
 
-    private PrintStream console;
+    private InputStream in;
+    private PrintStream out;
     private ByteArrayOutputStream bytes;
 
     @Before
     public void setUp() {
         bytes = new ByteArrayOutputStream();
-        console = System.out;
+        in = System.in;
+        out = System.out;
         System.setOut(new PrintStream(bytes));
     }
 
     @After
     public void tearDown() {
-        System.setOut(console);
+        System.setIn(in);
+        System.setOut(out);
     }
 
     @Test
@@ -37,7 +43,7 @@ public class CustomerTest {
                 + "**************************\n";
 
         //when
-        MainMenu.printWelcomeMessage();
+        MainController.printWelcomeMessage();
 
         //then
         assertEquals(expected, bytes.toString());
@@ -56,9 +62,27 @@ public class CustomerTest {
                 + "**************************\n";
 
         //when
-        MainMenu.printMainMenu();
+        MainController.printMainMenu();
 
         //then
         assertEquals(expected, bytes.toString());
+    }
+
+    @Test
+    public void should_list_books_when_input_1() {
+        //given
+        String expected = "**************************\n"
+                + "*                        *\n"
+                + "*       Book List        *\n"
+                + "*                        *\n"
+                + "* 1. Harry·Potter        *\n"
+                + "* 2. Jane Eyre           *\n"
+                + "*                        *\n"
+                + "**************************\n";
+        //when
+        MainController.selectMenuItem("1");
+        //then
+        assertEquals(expected, bytes.toString());
+
     }
 }
