@@ -11,8 +11,14 @@ public class BibliotecaApp {
         MainController.printWelcomeMessage();
         MainController.printMainMenu();
         System.out.println("Please enter your selection:");
-        if (scanner.hasNext()) {
-            MainController.selectMenuItem(scanner.next());
+        while (true) {
+            if (scanner.hasNext()) {
+                String selection = scanner.next();
+                if (selection.equals("0")) {
+                    break;
+                }
+                MainController.selectMenuItem(selection);
+            }
         }
     }
 }

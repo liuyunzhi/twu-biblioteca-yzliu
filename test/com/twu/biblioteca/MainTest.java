@@ -59,6 +59,7 @@ public class MainTest {
                 + "* 1. List Books          *\n"
                 + "* 2. ...                 *\n"
                 + "*                        *\n"
+                + "*                Quit(0) *\n"
                 + "**************************\n";
 
         //when

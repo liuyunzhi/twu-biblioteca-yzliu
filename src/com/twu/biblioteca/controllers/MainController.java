@@ -18,6 +18,7 @@ public class MainController {
         System.out.println("* 1. List Books          *");
         System.out.println("* 2. ...                 *");
         System.out.println("*                        *");
+        System.out.println("*                Quit(0) *");
         System.out.println("**************************");
     }
 
