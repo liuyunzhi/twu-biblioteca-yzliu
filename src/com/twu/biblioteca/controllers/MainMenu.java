@@ -9,4 +9,15 @@ public class MainMenu {
         System.out.println("*                        *");
         System.out.println("**************************");
     }
+
+    public static void printMainMenu() {
+        System.out.println("**************************");
+        System.out.println("*                        *");
+        System.out.println("*       Main Menu        *");
+        System.out.println("*                        *");
+        System.out.println("* 1. List Books          *");
+        System.out.println("* 2. ...                 *");
+        System.out.println("*                        *");
+        System.out.println("**************************");
+    }
 }

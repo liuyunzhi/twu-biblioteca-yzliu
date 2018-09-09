@@ -42,4 +42,23 @@ public class CustomerTest {
         //then
         assertEquals(expected, bytes.toString());
     }
+
+    @Test
+    public void show_main_menu() {
+        //given
+        String expected = "**************************\n"
+                + "*                        *\n"
+                + "*       Main Menu        *\n"
+                + "*                        *\n"
+                + "* 1. List Books          *\n"
+                + "* 2. ...                 *\n"
+                + "*                        *\n"
+                + "**************************\n";
+
+        //when
+        MainMenu.printMainMenu();
+
+        //then
+        assertEquals(expected, bytes.toString());
+    }
 }
