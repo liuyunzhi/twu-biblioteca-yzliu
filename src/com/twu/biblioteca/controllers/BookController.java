@@ -30,12 +30,19 @@ public class BookController {
 
     public static void checkoutBook() {
         System.out.println("Please enter checkout book's index:");
-        if (scanner.hasNext()) {
-            String selection = scanner.next();
-            if (bookService.checkoutBook(Integer.parseInt(selection) - 1)) {
-                System.out.println("Thank you! Enjoy the book.");
-            } else {
-                System.out.println("That book is not available.");
+        while (true) {
+            if (scanner.hasNext()) {
+                String selection = scanner.next();
+                if (selection.equals("0")) {
+                    break;
+                }
+                if (bookService.checkoutBook(Integer.parseInt(selection) - 1)) {
+                    System.out.println("Thank you! Enjoy the book.");
+                    System.out.println("Whether to continue?(Enter 0 to return to the main menu.)");
+                } else {
+                    System.out.println("That book is not available.");
+                    System.out.println("Whether to continue?(Enter 0 to return to the main menu.)");
+                }
             }
         }
     }

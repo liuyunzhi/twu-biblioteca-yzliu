@@ -18,6 +18,7 @@ public class BibliotecaApp {
                     break;
                 }
                 MainController.selectMenuItem(selection);
+                MainController.printMainMenu();
             }
         }
     }

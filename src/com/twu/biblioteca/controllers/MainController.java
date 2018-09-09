@@ -1,6 +1,11 @@
 package com.twu.biblioteca.controllers;
 
+import java.util.Scanner;
+
 public class MainController {
+
+    private static Scanner scanner = new Scanner(System.in);
+
 
     public static void printWelcomeMessage() {
         System.out.println("**************************");
@@ -27,6 +32,12 @@ public class MainController {
         switch (index) {
             case "1":
                 BookController.listBooks();
+                System.out.println("Enter 0 to return to the main menu.");
+                while (true) {
+                    if (scanner.next().equals("0")) {
+                        break;
+                    }
+                }
                 break;
             case "2":
                 BookController.listBooks();
