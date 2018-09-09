@@ -16,10 +16,12 @@ public class BookController {
         List<Book> books = bookService.getBooks();
         for (int i = 1; i <= books.size(); i++) {
             Book book = books.get(i - 1);
-            System.out.println("* " + i + ". "
-                    + book.getName() + "\t"
-                    + book.getAuthor() + "\t\t"
-                    + book.getPublicationYear());
+            if (!book.getCheckout()) {
+                System.out.println("* " + i + ". "
+                        + book.getName() + "\t"
+                        + book.getAuthor() + "\t\t"
+                        + book.getPublicationYear());
+            }
         }
         System.out.println("*");
     }

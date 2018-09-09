@@ -5,6 +5,7 @@ public class Book {
     private String name;
     private String author;
     private String publicationYear;
+    private Boolean isCheckout;
 
     public Book() {
     }
@@ -13,6 +14,7 @@ public class Book {
         this.name = name;
         this.author = author;
         this.publicationYear = publicationYear;
+        isCheckout = false;
     }
 
     public String getName() {
@@ -37,5 +39,13 @@ public class Book {
 
     public void setPublicationYear(String publicationYear) {
         this.publicationYear = publicationYear;
+    }
+
+    public Boolean getCheckout() {
+        return isCheckout;
+    }
+
+    public void setCheckout(Boolean checkout) {
+        isCheckout = checkout;
     }
 }

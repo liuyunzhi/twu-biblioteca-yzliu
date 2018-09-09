@@ -57,7 +57,8 @@ public class MainTest {
                 + "*       Main Menu        *\n"
                 + "*                        *\n"
                 + "* 1. List Books          *\n"
-                + "* 2. ...                 *\n"
+                + "* 2. Checkout Book       *\n"
+                + "* 3. Return Book         *\n"
                 + "*                        *\n"
                 + "*                Quit(0) *\n"
                 + "**************************\n";

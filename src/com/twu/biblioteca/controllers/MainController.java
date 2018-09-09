@@ -16,7 +16,8 @@ public class MainController {
         System.out.println("*       Main Menu        *");
         System.out.println("*                        *");
         System.out.println("* 1. List Books          *");
-        System.out.println("* 2. ...                 *");
+        System.out.println("* 2. Checkout Book       *");
+        System.out.println("* 3. Return Book         *");
         System.out.println("*                        *");
         System.out.println("*                Quit(0) *");
         System.out.println("**************************");
