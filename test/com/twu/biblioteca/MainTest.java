@@ -71,14 +71,12 @@ public class MainTest {
     @Test
     public void should_list_books_when_input_1() {
         //given
-        String expected = "**************************\n"
-                + "*                        *\n"
-                + "*       Book List        *\n"
-                + "*                        *\n"
-                + "* 1. Harry·Potter        *\n"
-                + "* 2. Jane Eyre           *\n"
-                + "*                        *\n"
-                + "**************************\n";
+        String expected = "*\t\t\t\t\tBook List\n"
+                + "*\n"
+                + "*    Name\t\t\tAuthor\t\t\tPublication Year\n"
+                + "* 1. Harry·Potter\tJ. K. Rowling\t\t1997\n"
+                + "* 2. Jane Eyre\tCharlotte Bronte\t\t1847\n"
+                + "*\n";
         //when
         MainController.selectMenuItem("1");
         //then
