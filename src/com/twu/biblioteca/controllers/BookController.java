@@ -46,4 +46,23 @@ public class BookController {
             }
         }
     }
+
+    public static void returnBook() {
+        System.out.println("Please enter return book's index:");
+        while (true) {
+            if (scanner.hasNext()) {
+                String selection = scanner.next();
+                if (selection.equals("0")) {
+                    break;
+                }
+                if (bookService.returnBook(Integer.parseInt(selection) - 1)) {
+                    System.out.println("Thank you for returning the book.");
+                    System.out.println("Whether to continue?(Enter 0 to return to the main menu.)");
+                } else {
+                    System.out.println("That is not a valid book to return.");
+                    System.out.println("Whether to continue?(Enter 0 to return to the main menu.)");
+                }
+            }
+        }
+    }
 }

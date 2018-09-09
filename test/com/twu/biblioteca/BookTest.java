@@ -33,12 +33,24 @@ public class BookTest {
     }
 
     @Test
-    public void should_show_thank_you_when_successful_checkout_given_1() {
+    public void should_show_notification_when_successful_checkout_given_valid_index() {
         //given
         String expected = "Please enter checkout book's index:\n"
                 + "Thank you! Enjoy the book.\n";
         //when
         System.setIn(new ByteArrayInputStream("1".getBytes()));
+        BookController.checkoutBook();
+        //then
+        assertEquals(expected, bytes.toString());
+    }
+
+    @Test
+    public void should_show_notification_when_unsuccessful_checkout_given_invalid_index() {
+        //given
+        String expected = "Please enter checkout book's index:\n"
+                + "That is not a valid book to return.\n";
+        //when
+        System.setIn(new ByteArrayInputStream("100".getBytes()));
         BookController.checkoutBook();
         //then
         assertEquals(expected, bytes.toString());

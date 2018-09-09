@@ -33,4 +33,15 @@ public class BookService {
         book.setCheckout(true);
         return true;
     }
+
+    public boolean returnBook(Integer index) {
+        Book book;
+        try {
+            book = books.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            return false;
+        }
+        book.setCheckout(false);
+        return true;
+    }
 }

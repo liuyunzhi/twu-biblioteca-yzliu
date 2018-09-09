@@ -43,6 +43,9 @@ public class MainController {
                 BookController.listBooks();
                 BookController.checkoutBook();
                 break;
+            case "3":
+                BookController.returnBook();
+                break;
             default:
                 System.out.println("Select a valid option!");
                 break;
