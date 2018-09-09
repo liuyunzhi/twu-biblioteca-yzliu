@@ -27,6 +27,9 @@ public class BookService {
         Book book;
         try {
             book = books.get(index);
+            if (book.getCheckout()) {
+                return false;
+            }
         } catch (IndexOutOfBoundsException e) {
             return false;
         }
@@ -38,6 +41,9 @@ public class BookService {
         Book book;
         try {
             book = books.get(index);
+            if (!book.getCheckout()) {
+                return false;
+            }
         } catch (IndexOutOfBoundsException e) {
             return false;
         }
