@@ -1,8 +1,6 @@
 package com.twu.biblioteca;
 
-import com.twu.biblioteca.controllers.BookController;
 import com.twu.biblioteca.controllers.MainController;
-import com.twu.biblioteca.entity.Book;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

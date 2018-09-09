@@ -22,4 +22,15 @@ public class BookService {
     public void setBooks(List<Book> books) {
         this.books = books;
     }
+
+    public boolean checkoutBook(Integer index) {
+        Book book;
+        try {
+            book = books.get(index);
+        } catch (IndexOutOfBoundsException e) {
+            return false;
+        }
+        book.setCheckout(true);
+        return true;
+    }
 }

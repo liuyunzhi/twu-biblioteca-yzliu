@@ -26,7 +26,11 @@ public class MainController {
     public static void selectMenuItem(String index) {
         switch (index) {
             case "1":
-                BookController.ListBooks();
+                BookController.listBooks();
+                break;
+            case "2":
+                BookController.listBooks();
+                BookController.checkoutBook();
                 break;
             default:
                 System.out.println("Select a valid option!");
