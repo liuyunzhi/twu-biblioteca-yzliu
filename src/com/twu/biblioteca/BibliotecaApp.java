@@ -27,6 +27,10 @@ public class BibliotecaApp {
                     System.out.println("Please login!");
                     continue;
                 }
+                if (selection.equals("I")) {
+                    UserController.printUserInfo(user);
+                    continue;
+                }
                 MainController.selectMenuItem(selection);
                 MainController.printMainMenu(user);
             }

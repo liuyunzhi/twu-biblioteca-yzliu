@@ -31,4 +31,12 @@ public class UserController {
             return user;
         }
     }
+
+    public static void printUserInfo(User user) {
+        System.out.println("*");
+        System.out.println("* name:   " + user.getName());
+        System.out.println("* email:  " + user.getEmail());
+        System.out.println("* phone:  " + user.getPhone());
+        System.out.println("*");
+    }
 }
