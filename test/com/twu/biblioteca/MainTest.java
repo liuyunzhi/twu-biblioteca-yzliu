@@ -62,7 +62,7 @@ public class MainTest {
                 + "**************************\n";
 
         //when
-        MainController.printMainMenu();
+        MainController.printMainMenu(null);
 
         //then
         assertEquals(expected, bytes.toString());

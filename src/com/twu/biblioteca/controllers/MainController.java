@@ -1,21 +1,22 @@
 package com.twu.biblioteca.controllers;
 
+import com.twu.biblioteca.entity.User;
+
 import java.util.Scanner;
 
 public class MainController {
 
     private static Scanner scanner = new Scanner(System.in);
 
-
     public static void printWelcomeMessage() {
         System.out.println("**************************");
         System.out.println("*                        *");
-        System.out.println("* Welcome to Biblioteca !*");
+        System.out.println("* Welcome to Biblioteca! *");
         System.out.println("*                        *");
         System.out.println("**************************");
     }
 
-    public static void printMainMenu() {
+    public static void printMainMenu(User user) {
         System.out.println("**************************");
         System.out.println("*                        *");
         System.out.println("*       Main Menu        *");
@@ -27,7 +28,11 @@ public class MainController {
         System.out.println("* 5. Checkout Movie      *");
         System.out.println("* 6. Return Movie        *");
         System.out.println("*                        *");
-        System.out.println("*                Quit(0) *");
+        if (user == null) {
+            System.out.println("* Quit(Q)       Login(L) *");
+        } else {
+            System.out.println("* Quit(Q)   " + user.getName() + "(I) *");
+        }
         System.out.println("**************************");
     }
 
