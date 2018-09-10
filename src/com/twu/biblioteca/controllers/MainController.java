@@ -23,6 +23,9 @@ public class MainController {
         System.out.println("* 1. List Books          *");
         System.out.println("* 2. Checkout Book       *");
         System.out.println("* 3. Return Book         *");
+        System.out.println("* 4. List Movies         *");
+        System.out.println("* 5. Checkout Movie      *");
+        System.out.println("* 6. Return Movie        *");
         System.out.println("*                        *");
         System.out.println("*                Quit(0) *");
         System.out.println("**************************");
@@ -45,6 +48,22 @@ public class MainController {
                 break;
             case "3":
                 BookController.returnBook();
+                break;
+            case "4":
+                MovieController.listMovies();
+                System.out.println("Enter 0 to return to the main menu.");
+                while (true) {
+                    if (scanner.next().equals("0")) {
+                        break;
+                    }
+                }
+                break;
+            case "5":
+                MovieController.listMovies();
+                MovieController.checkoutMovie();
+                break;
+            case "6":
+                MovieController.returnMovie();
                 break;
             default:
                 System.out.println("Select a valid option!");
